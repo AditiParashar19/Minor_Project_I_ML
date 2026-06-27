@@ -9,7 +9,6 @@
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
 [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)]()
 
 <br/>
@@ -26,29 +25,29 @@
 
 ## 📑 Table of Contents
 
-- [🧩 Problem Statement](#-problem-statement)
-- [🎯 Project Objectives](#-project-objectives)
-- [📊 Dataset](#-dataset)
-- [⚙️ Methodology](#️-methodology)
-- [🔍 Exploratory Data Analysis](#-exploratory-data-analysis)
-- [🤖 Model Development](#-model-development)
-- [📈 Results & Evaluation](#-results--evaluation)
-- [🏆 Conclusion](#-conclusion)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [🚀 How to Run](#-how-to-run)
-- [📚 References](#-references)
+- [ Problem Statement](#-problem-statement)
+- [ Project Objectives](#-project-objectives)
+- [ Dataset](#-dataset)
+- [ Methodology](#️-methodology)
+- [ Exploratory Data Analysis](#-exploratory-data-analysis)
+- [ Model Development](#-model-development)
+- [ Results & Evaluation](#-results--evaluation)
+- [ Conclusion](#-conclusion)
+- [ Tech Stack](#️-tech-stack)
+- [ Project Structure](#-project-structure)
+- [ How to Run](#-how-to-run)
+- [ References](#-references)
 
 ---
 
-## 🧩 Problem Statement
+##  Problem Statement
 
 Agriculture plays a vital role in the economy, and selecting the **right crop** is essential for high productivity. Farmers often face challenges in choosing the most suitable crop due to variations in:
 
-- 🌱 Soil nutrient levels
-- 🌡️ Temperature and humidity
-- 🌧️ Rainfall patterns
-- 🧪 Soil pH values
+-  Soil nutrient levels
+-  Temperature and humidity
+-  Rainfall patterns
+-  Soil pH values
 
 > **Incorrect crop selection leads to poor yields, resource inefficiency, and financial losses.**
 
@@ -56,7 +55,7 @@ This project develops a **Crop Recommendation System** using supervised machine 
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 | # | Objective |
 |---|-----------|
@@ -70,7 +69,7 @@ This project develops a **Crop Recommendation System** using supervised machine 
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 <div align="center">
 
@@ -82,14 +81,14 @@ This project develops a **Crop Recommendation System** using supervised machine 
 
 | Property | Value |
 |----------|-------|
-| 📦 Total Records | 2,200 |
-| 🔢 Features | 8 (7 input + 1 target) |
+|  Total Records | 2,200 |
+|  Features | 8 (7 input + 1 target) |
 | 🌾 Crop Classes | 22 unique crops |
-| ⚖️ Class Balance | Perfectly balanced (100 samples/class) |
+|  Class Balance | Perfectly balanced (100 samples/class) |
 | ❌ Missing Values | None |
-| 🔁 Duplicates | None |
+|  Duplicates | None |
 
-### 🔡 Input Features
+### Input Features
 
 | Feature | Description | Unit |
 |---------|-------------|------|
@@ -101,7 +100,7 @@ This project develops a **Crop Recommendation System** using supervised machine 
 | **pH** | Soil pH value | — |
 | **Rainfall** | Rainfall measurement | mm |
 
-### 🎯 Target Variable
+###  Target Variable
 
 **Label** — 22 Crop Classes:
 
@@ -118,18 +117,13 @@ This project develops a **Crop Recommendation System** using supervised machine 
 ## ⚙️ Methodology
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    ML PIPELINE                              │
-│                                                             │
-│  📥 Data       🔧 Pre-        🔍 EDA        🤖 Model       │
-│  Loading  ──►  processing ──► Analysis ──►  Training       │
-│                                                             │
-│               ▼                               ▼            │
-│  📊 Evaluation  ◄─────────────────  🎯 Prediction          │
-└─────────────────────────────────────────────────────────────┘
+ML Pipeline
+
+Data Loading -> Pre Processing -> EDA Analysis -> Feature Selection -> Train-Test Split -> Model Training (KNN,Random Forest,Logistic Regression) -> Prediction -> Model Evaluation 
+
 ```
 
-### 🔧 Data Preprocessing Steps
+###  Data Preprocessing Steps
 
 <details>
 <summary><b>Click to expand preprocessing details</b></summary>
@@ -142,30 +136,30 @@ This project develops a **Crop Recommendation System** using supervised machine 
 
 </details>
 
-### 🔀 Train-Test Split
+###  Train-Test Split
 
 ```
 Total Data: 2,200 samples
-├── 🟦 Training Set: 80% → 1,760 samples
-└── 🟨 Testing Set:  20% → 440 samples
+🟦 Training Set: 80% → 1,760 samples
+🟨 Testing Set:  20% → 440 samples
 ```
 
 ---
 
-## 🔍 Exploratory Data Analysis
+##  Exploratory Data Analysis
 
 EDA was performed to understand data characteristics before model development:
 
 | Analysis | Purpose |
 |---------|---------|
-| 📐 Dataset dimensions | Understand structure and data types |
-| 📊 Statistical summary | Describe range and central tendency |
-| 📉 Histograms | Understand feature distributions |
-| 📦 Boxplots | Detect outliers |
-| 🌡️ Correlation heatmap | Analyze inter-feature relationships |
-| 🌾 Class distribution | Confirm dataset balance |
+|  Dataset dimensions | Understand structure and data types |
+|  Statistical summary | Describe range and central tendency |
+|  Histograms | Understand feature distributions |
+|  Boxplots | Detect outliers |
+|  Correlation heatmap | Analyze inter-feature relationships |
+|  Class distribution | Confirm dataset balance |
 
-### 🔑 Key EDA Findings
+###  Key EDA Findings
 
 - ✅ **Balanced dataset** — 22 crops × 100 samples each
 - ✅ **No missing values or duplicates**
@@ -199,9 +193,9 @@ Three supervised learning algorithms were implemented and compared:
 | Captures similarity between conditions | Slow prediction on large datasets |
 | No distributional assumptions | — |
 
-> 🔁 **K values from 1–20 were evaluated** to find the optimal K with highest test accuracy
+> **K values from 1–20 were evaluated** to find the optimal K with highest test accuracy
 
-### 3️⃣ Random Forest ⭐ *Best Performer*
+### 3️⃣ Random Forest  *Best Model*
 
 > An ensemble of decision trees trained on random data subsets; final prediction via majority voting
 
@@ -214,17 +208,17 @@ Three supervised learning algorithms were implemented and compared:
 
 ---
 
-## 📈 Results & Evaluation
+##  Results & Evaluation
 
-### 🏅 Model Performance Comparison
+### Model Performance Comparison
 
 | Model | Accuracy | Precision | Recall | F1-Score |
 |-------|----------|-----------|--------|----------|
-| 📊 Logistic Regression | 97.27% | 97.40% | 97.27% | 97.25% |
-| 🔵 K-Nearest Neighbors | 98.18% | 98.28% | 98.18% | 98.17% |
-| 🌲 **Random Forest** | **99.55%** | **99.57%** | **99.55%** | **99.55%** |
+|  Logistic Regression | 97.27% | 97.40% | 97.27% | 97.25% |
+|  K-Nearest Neighbors | 98.18% | 98.28% | 98.18% | 98.17% |
+|  **Random Forest** | **99.55%** | **99.57%** | **99.55%** | **99.55%** |
 
-### 📊 Visual Comparison
+###  Visual Comparison
 
 ```
 Accuracy Comparison:
@@ -236,7 +230,7 @@ Random Forest        ███████████████████�
                      96%                                       100%
 ```
 
-### 📋 Evaluation Metrics Used
+###  Evaluation Metrics Used
 
 - **Accuracy** — % of correctly classified samples
 - **Precision** — Correctness of positive predictions
@@ -244,13 +238,13 @@ Random Forest        ███████████████████�
 - **F1-Score** — Harmonic mean of Precision and Recall
 - **Confusion Matrix** — Per-class prediction analysis
 
-### 🥇 Final Model: Random Forest
+###  Final Model: Random Forest
 
 > Random Forest was selected as the final model with **99.55% accuracy**, the lowest classification errors in the confusion matrix, and excellent generalization performance.
 
 ---
 
-## 🏆 Conclusion
+##  Conclusion
 
 The **Crop Recommendation System** successfully demonstrates the application of supervised machine learning in precision agriculture. By analyzing soil nutrients (N, P, K), temperature, humidity, pH, and rainfall, the system predicts the most suitable crop with high accuracy.
 
@@ -262,14 +256,14 @@ The **Crop Recommendation System** successfully demonstrates the application of 
 
 **Random Forest** emerged as the most effective algorithm due to its ensemble learning approach, high predictive accuracy, and robustness against noise.
 
-### 🔮 Future Enhancements
+###  Future Enhancements
 
-- [ ] 🌐 Integration of real-time weather data APIs
-- [ ] 💊 Fertilizer recommendation module
-- [ ] 🦠 Crop disease prediction
-- [ ] 💰 Market price forecasting
-- [ ] 📱 Mobile app interface for farmers
-- [ ] 🗺️ Region-specific model fine-tuning
+- [1]  Integration of real-time weather data APIs
+- [2]  Fertilizer recommendation module
+- [3]  Crop disease prediction
+- [4]  Market price forecasting
+- [5]  Mobile app interface for farmers
+- [6]  Region-specific model fine-tuning
 
 ---
 
@@ -304,15 +298,16 @@ The **Crop Recommendation System** successfully demonstrates the application of 
 ## 📁 Project Structure
 
 ```
-📦 crop-recommendation-system/
+ crop-recommendation-system/
 │
-├── 📓 AI_ML_Internship_Project.ipynb   # Main Jupyter Notebook
-├── 📄 README.md                         # Project documentation (this file)
+├──  AI_ML_Internship_Project.ipynb   # Main Jupyter Notebook
+├── 📄 README.md                         # Project documentation 
 ├── 📂 data/
-│   └── 📊 Crop_recommendation.csv       # Dataset
-└── 📂 outputs/
-    ├── 🖼️ eda_plots/                    # EDA visualizations
-    └── 📊 model_results/                # Confusion matrices & metrics
+│   └──  Crop_recommendation.csv       # Dataset
+└── 📂 results/
+    ├──  eda_plots                    # EDA visualizations
+    └──  model_results                # Confusion matrices & metrics
+    
 ```
 
 ---
@@ -330,7 +325,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 ```bash
 # 1. Clone the repository
 git clone https://github.com/AditiParashar19/Minor_Project_1_ML.git
-cd crop-recommendation-system
+cd Minor_Project_1_ML
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -355,24 +350,18 @@ print(f"Recommended Crop: {label_encoder.inverse_transform(prediction)[0]}")
 
 ---
 
-## 📚 References
+##  References
 
 1. Atharva Ingle. [Crop Recommendation Dataset](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset). Kaggle.
-2. [Scikit-learn Documentation](https://scikit-learn.org/stable/) — Scikit-learn Developers.
+2. [Scikit-learn Documentation](https://scikit-learn.org/stable/) 
 3. McKinney, W. (2022). *Python for Data Analysis* (3rd Edition). O'Reilly Media.
-4. [Pandas Documentation](https://pandas.pydata.org/) — Pandas Development Team.
-5. [NumPy Documentation](https://numpy.org/) — NumPy Developers.
-6. [Matplotlib Documentation](https://matplotlib.org/) — Matplotlib Development Team.
-7. [Seaborn Documentation](https://seaborn.pydata.org/) — Seaborn Developers.
+4. [Pandas Documentation](https://pandas.pydata.org/)  
+5. [NumPy Documentation](https://numpy.org/) 
+6. [Matplotlib Documentation](https://matplotlib.org/) 
+7. [Seaborn Documentation](https://seaborn.pydata.org/) 
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for Precision Agriculture**
-
-⭐ *If you found this project helpful, please give it a star!* ⭐
-
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/crop-recommendation-system?style=social)](https://github.com/your-username/crop-recommendation-system)
-
-</div>
+**Made with ❤️ for Agriculture**
