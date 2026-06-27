@@ -23,7 +23,7 @@
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [ Problem Statement](#-problem-statement)
 - [ Project Objectives](#-project-objectives)
@@ -169,7 +169,7 @@ EDA was performed to understand data characteristics before model development:
 
 ---
 
-## 🤖 Model Development
+##  Model Development
 
 Three supervised learning algorithms were implemented and compared:
 
@@ -177,7 +177,7 @@ Three supervised learning algorithms were implemented and compared:
 
 > A probabilistic linear classifier that estimates crop class probabilities
 
-| ✅ Advantages | ⚠️ Limitations |
+|  Advantages | Limitations |
 |---|---|
 | Simple and computationally efficient | Assumes linear decision boundaries |
 | Easy to interpret | Performance drops on complex data |
@@ -187,7 +187,7 @@ Three supervised learning algorithms were implemented and compared:
 
 > Classifies crops by finding the K most similar agricultural samples via Euclidean distance
 
-| ✅ Advantages | ⚠️ Limitations |
+|  Advantages | Limitations |
 |---|---|
 | Effective for multi-class classification | Sensitive to feature scaling |
 | Captures similarity between conditions | Slow prediction on large datasets |
@@ -199,7 +199,7 @@ Three supervised learning algorithms were implemented and compared:
 
 > An ensemble of decision trees trained on random data subsets; final prediction via majority voting
 
-| ✅ Advantages | ⚠️ Limitations |
+|  Advantages |  Limitations |
 |---|---|
 | Very high accuracy | Higher compute requirements |
 | Handles non-linear relationships | Less interpretable |
