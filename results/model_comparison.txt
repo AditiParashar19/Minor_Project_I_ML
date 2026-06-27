@@ -1,0 +1,21 @@
+Model Comparison Results
+========================
+
+
+Model: Logistic Regression
+Accuracy  : 0.9727
+Precision : 0.9740
+Recall    : 0.9727
+F1 Score  : 0.9725
+
+Model: K-Nearest Neighbors
+Accuracy  : 0.9818
+Precision : 0.9828
+Recall    : 0.9818
+F1 Score  : 0.9817
+
+Model: Random Forest
+Accuracy  : 0.9955
+Precision : 0.9957
+Recall    : 0.9955
+F1 Score  : 0.9955
